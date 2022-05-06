@@ -29,20 +29,20 @@
     - 77.组合  
     - 93.复原IP地址
 * **模板代码**
-```python
-def f(nums):
-    n = len(nums)
-    def recursion(path, candidate):
-        if len(path) == n:
-            res.append(path)
-            return
-        for i in range(len(candidate)):
-            recursion(path+[candidate[i]], candidate[:i] + candidate[i+1:])
+	```python
+	def f(nums):
+		n = len(nums)
+		def recursion(path, candidate):
+			if len(path) == n:
+				res.append(path)
+				return
+			for i in range(len(candidate)):
+				recursion(path+[candidate[i]], candidate[:i] + candidate[i+1:])
 
-    res = []
-    recursion([], nums)
-    return res
-```
+		res = []
+		recursion([], nums)
+		return res
+	```
 ### 动态规划：解决重复结算的问题
 * **相关leetcode题目**
     - 62.不同路径
@@ -62,7 +62,29 @@ def f(n):
 ## 排序算法
 * **O(n)时间复杂度**
     * 冒泡排序
+    	* 模板代码
+		```python
+		def BubleSort(arr):
+		    n = len(arr)
+		    for i in range(1,n):
+				for j in range(n-i):
+			        if arr[j] > arr[j+1]:
+				        arr[j], arr[j+1] = arr[j+1], arr[j]
+			    print(arr)
+		    return arr
+		```
     * 选择排序
+    	* 模板代码
+    	```python
+		def SelectionSort(arr):
+		    n = len(arr)
+			for i in range(n-1):
+		        for j in range(i+1, n):
+		            if arr[j] < arr[i]:
+		                arr[i], arr[j] = arr[j], arr[i]
+		        print(arr)
+			return arr
+		```
     * 插入排序
 * **O(n^2)时间复杂度**
 	* 快速排序
