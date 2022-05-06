@@ -56,7 +56,7 @@ def f(n):
 * **相关leetcode题目**
     * 15.三数之和
 ## 排序算法
-* **O(n)时间复杂度**
+* **O(n^2)时间复杂度**
     * 冒泡排序
     	* 模板代码
 		```python
@@ -93,7 +93,18 @@ def f(n):
                     j = j - 1
                 arr[j+1] = key
         ```
-* **O(n^2)时间复杂度**
+* **O(nlogn)时间复杂度**
 	* 快速排序
+	    * 模板代码
+	    ```python
+        def quicksort(arr):
+            if len(arr) < 2:
+                return arr
+            else:
+                pivot = arr[0]
+                less = [each for each in arr[1:] if each <= pivot]
+                greater = [each for each in arr[1:] if each > pivot]
+                return quicksort(less) + [pivot] + quicksort(greater)
+        ```
 	* 归并排序
 	* 堆排序
