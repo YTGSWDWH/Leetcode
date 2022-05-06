@@ -35,6 +35,7 @@ def f(nums):
     def recursion(path, candidate):
         if len(path) == n:
             res.append(path)
+            return
         for i in range(len(candidate)):
             recursion(path+[candidate[i]], candidate[:i] + candidate[i+1:])
 
