@@ -29,20 +29,20 @@
     - 77.组合  
     - 93.复原IP地址
 * **模板代码**
-	```python
-	def f(nums):
-		n = len(nums)
-		def recursion(path, candidate):
-			if len(path) == n:
-				res.append(path)
-				return
-			for i in range(len(candidate)):
-				recursion(path+[candidate[i]], candidate[:i] + candidate[i+1:])
+```python
+def f(nums):
+	n = len(nums)
+	def recursion(path, candidate):
+		if len(path) == n:
+			res.append(path)
+			return
+		for i in range(len(candidate)):
+			recursion(path+[candidate[i]], candidate[:i] + candidate[i+1:])
 
-		res = []
-		recursion([], nums)
-		return res
-	```
+	res = []
+	recursion([], nums)
+	return res
+```
 ### 动态规划：解决重复结算的问题
 * **相关leetcode题目**
     - 62.不同路径
