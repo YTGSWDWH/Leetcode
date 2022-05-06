@@ -107,4 +107,41 @@ def f(n):
                 return quicksort(less) + [pivot] + quicksort(greater)
         ```
 	* 归并排序
+	    * 模板代码
+	    ```python
+        def merge(left, right):
+            result = []
+            i, j = 0, 0
+            while i < len(left) and j < len(right):
+                if left[i] <= right[j]:
+                    result.append(left[i])
+                    i += 1
+                else:
+                    result.append(right[j])
+                    j += 1
+            result += left[i:]
+            result += right[j:]
+            return result
+        def mergesort(arr):
+            n = len(arr)
+            if n <= 1:
+                return arr
+            mid = n // 2
+            left = mergesort(arr[:mid])
+            right = mergesort(arr[mid:])
+            return merge(left, right)
+        ```
 	* 堆排序
+	    * 模板代码
+	    ```python
+        
+        ```
+* **稳定性**
+    * 稳定的排序算法
+        * 冒泡排序
+        * 插入排序
+        * 归并排序
+    * 不稳定的排序算法
+        * 选择排序
+        * 快速排序
+        * 堆排序
