@@ -66,7 +66,7 @@ def f(n):
                 for j in range(n-i):
                     if arr[j] > arr[j+1]:
                         arr[j], arr[j+1] = arr[j+1], arr[j]
-			    print(arr)
+		        print(arr)
 		    return arr
 		```
     * 选择排序
