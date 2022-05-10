@@ -147,7 +147,7 @@ def f(n):
                     lists[max], lists[i] = lists[i], lists[max]
                     adjust_heap(lists, max, size)
         def build_heap(lists, size):
-            for i in range(size // 2, -1, -1):
+            for i in range(size // 2 -1, -1, -1):
                 adjust_heap(lists, i, size)
         def heap_sort(lists):
             size = len(lists)
